@@ -7,6 +7,7 @@ const clearButton = document.getElementById('clearButton');
 const undoButton = document.getElementById('undoButton');
 const redoButton = document.getElementById('redoButton');
 const exportButton = document.getElementById('exportButton');
+const importButton = document.getElementById('importButton');
 const importInput = document.getElementById('importInput');
 
 canvas.width = window.innerWidth;
@@ -97,6 +98,10 @@ exportButton.addEventListener('click', () => {
     link.download = 'drawing.png';
     link.href = canvas.toDataURL();
     link.click();
+});
+
+importButton.addEventListener('click', () => {
+    importInput.click();
 });
 
 importInput.addEventListener('change', (e) => {
