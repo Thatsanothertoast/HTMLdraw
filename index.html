@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>HTML Draw</title>
+    <title>Advanced Drawing</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -10,6 +10,11 @@
         <button id="eraserButton">Eraser</button>
         <input type="color" id="colorPicker" value="#000000">
         <button id="clearButton">Clear</button>
+        <button id="undoButton">Undo</button>
+        <button id="redoButton">Redo</button>
+        <button id="exportButton">Export PNG</button>
+        <input type="file" id="importInput" accept="image/png">
+        <label for="importInput">Import PNG</label>
     </div>
     <canvas id="drawingCanvas"></canvas>
     <script src="script.js"></script>
