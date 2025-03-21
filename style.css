@@ -16,8 +16,8 @@ canvas {
     position: absolute;
     top: 10px;
     left: 10px;
-    z-index: 10; /* Put the controls on top of the canvas */
-    background-color: rgba(255, 255, 255, 0.7); /* Slightly transparent background */
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.7);
     padding: 10px;
     border-radius: 5px;
 }
