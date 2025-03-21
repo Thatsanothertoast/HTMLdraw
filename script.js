@@ -29,12 +29,16 @@ function saveState() {
 }
 
 function restoreState() {
-    let img = new Image();
-    img.src = history[historyIndex];
-    img.onload = () => {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.drawImage(img, 0, 0);
-    };
+    if (history.length > 0 && historyIndex >= 0 && historyIndex < history.length) { // Corrected condition
+        let img = new Image();
+        img.src = history[historyIndex];
+        img.onload = () => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.drawImage(img, 0, 0);
+        };
+    } else {
+        ctx.clearRect(0, 0, canvas.width, canvas.height); //Clear screen if no history.
+    }
 }
 
 function startDrawing(e) {
